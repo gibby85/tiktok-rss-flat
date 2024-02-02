@@ -18,7 +18,7 @@ logger.setLevel(logging.DEBUG)
 # Now using a new TikTok library https://github.com/Russell-Newton/TikTokPy
 
 # Normal GitHub Pages URL
-ghPagesURL = "https://github.com/gibby85/tiktok-rss-flat/"
+ghPagesURL = "https://gibby85.github.io/tiktok-rss-flat/"
 
 # Custom Domain
 # ghPagesURL = "https://tiktokrss.conoroneill.com/"
