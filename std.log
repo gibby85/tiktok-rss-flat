@@ -1,2 +1,104 @@
-2024-08-21 02:42:18,943 Using selector: EpollSelector
-2024-08-21 02:44:21,517 Error: Data scraping unable to complete in 60.0s (retries: 3)
+2024-08-21 03:26:49,567 Using selector: EpollSelector
+2024-08-21 03:26:50,497 Error: BrowserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /home/runner/.cache/ms-playwright/chromium-1129/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --headless=old --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --single-process --user-data-dir=/tmp/playwright_chromiumdev_profile-XXXXXXlrSKWA --remote-debugging-pipe --no-startup-window
+<launched> pid=3000
+[pid=3000][err] Old Headless mode will be removed from the Chrome binary soon. Please use the new Headless mode (https://developer.chrome.com/docs/chromium/new-headless) or the chrome-headless-shell which is a standalone implementation of the old Headless mode (https://developer.chrome.com/blog/chrome-headless-shell).
+[pid=3000][err] 
+[pid=3000][err] [0821/032649.932224:WARNING:audio_manager_linux.cc(53)] Falling back to ALSA for audio output. PulseAudio is not available or could not be initialized.
+[pid=3000][err] Received signal 11 SI_KERNEL000000000000
+[pid=3000][err]  Possibly a General Protection Fault, can be due to a non-canonical address dereference. See "Intel 64 and IA-32 Architectures Software Developer’s Manual", Volume 1, Section 3.3.7.1.
+[pid=3000][err] #0 0x55c5fa5d0442 base::debug::CollectStackTrace()
+[pid=3000][err] #1 0x55c5fa5bd3be base::debug::StackTrace::StackTrace()
+[pid=3000][err] #2 0x55c5fa5cfe51 base::debug::(anonymous namespace)::StackDumpSignalHandler()
+[pid=3000][err] #3 0x7f78c6a42520 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x4251f)
+[pid=3000][err] #4 0x7f78c6a44c1d getenv
+[pid=3000][err] #5 0x55c5faf16739 IA__FcConfigGetFilename
+[pid=3000][err] #6 0x55c5faf33384 FcParseInclude
+[pid=3000][err] #7 0x55c5faf32aaf FcEndElement
+[pid=3000][err] #8 0x55c5faf514ef xmlParseEndTag1
+[pid=3000][err] #9 0x55c5faf54a36 xmlParseChunk
+[pid=3000][err] #10 0x55c5faf32067 FcConfigParseAndLoadFromMemoryInternal
+[pid=3000][err] #11 0x55c5faf31bac _FcConfigParse
+[pid=3000][err] #12 0x55c5faf31c33 _FcConfigParse
+[pid=3000][err] #13 0x55c5faf33370 FcParseInclude
+[pid=3000][err] #14 0x55c5faf32aaf FcEndElement
+[pid=3000][err] #15 0x55c5faf514ef xmlParseEndTag1
+[pid=3000][err] #16 0x55c5faf54a36 xmlParseChunk
+[pid=3000][err] #17 0x55c5faf32067 FcConfigParseAndLoadFromMemoryInternal
+[pid=3000][err] #18 0x55c5faf31bac _FcConfigParse
+[pid=3000][err] #19 0x55c5faf252cb FcInitLoadOwnConfig
+[pid=3000][err] #20 0x55c5faf25521 IA__FcInitLoadConfigAndFonts
+[pid=3000][err] #21 0x55c5faf156d1 FcConfigInit
+[pid=3000][err] #22 0x55c5fb067945 base::NoDestructor<>::NoDestructor<>()
+[pid=3000][err] #23 0x55c5fb0678d6 base::internal::Invoker<>::RunOnce()
+[pid=3000][err] #24 0x55c5fa56135f base::TaskAnnotator::RunTaskImpl()
+[pid=3000][err] #25 0x55c5fa585237 base::internal::TaskTracker::RunTaskImpl()
+[pid=3000][err] #26 0x55c5fa5852d1 base::internal::TaskTracker::RunSkipOnShutdown()
+[pid=3000][err] #27 0x55c5fa584f86 base::internal::TaskTracker::RunTask()
+[pid=3000][err] #28 0x55c5fa584a55 base::internal::TaskTracker::RunAndPopNextTask()
+[pid=3000][err] #29 0x55c5fa5971e8 base::internal::WorkerThread::RunWorker()
+[pid=3000][err] #30 0x55c5fa596e4d base::internal::WorkerThread::RunPooledWorker()
+[pid=3000][err] #31 0x55c5fa596d4d base::internal::WorkerThread::ThreadMain()
+[pid=3000][err] #32 0x55c5fa5b3b2a base::(anonymous namespace)::ThreadFunc()
+[pid=3000][err] #33 0x7f78c6a94ac3 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x94ac2)
+[pid=3000][err] #34 0x7f78c6b26850 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x12684f)
+[pid=3000][err]   r8: 00002c6800215e00  r9: 00642e666e6f632e r10: 0000000000000040 r11: 0000000000000206
+[pid=3000][err]  r12: 005c0200682c0000 r13: 0000000000000004 r14: 0000000000000002 r15: 000055c5f3006249
+[pid=3000][err]   di: 000055c5f3006247  si: 00007f78c0e35dd0  bp: 0000000000004f48  bx: 00002c6800024800
+[pid=3000][err]   dx: 000055c5f3006247  ax: 0000000000000004  cx: 0000000000000000  sp: 00007f78c0e359e0
+[pid=3000][err]   ip: 00007f78c6a44c1d efl: 0000000000010206 cgf: 002b000000000033 erf: 0000000000000000
+[pid=3000][err]  trp: 000000000000000d msk: 0000000000000000 cr2: 0000000000000000
+[pid=3000][err] [end of stack trace]
+Call log:
+<launching> /home/runner/.cache/ms-playwright/chromium-1129/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=ImprovedCookieControls,LazyFrameLoading,GlobalMediaControls,DestroyProfileOnBrowserClose,MediaRouter,DialMediaRouteProvider,AcceptCHFrame,AutoExpandDetailsElement,CertificateTransparencyComponentUpdater,AvoidUnnecessaryBeforeUnloadCheckSync,Translate,HttpsUpgrades,PaintHolding,PlzDedicatedWorker --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --headless=old --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-gpu --single-process --user-data-dir=/tmp/playwright_chromiumdev_profile-XXXXXXlrSKWA --remote-debugging-pipe --no-startup-window
+  - <launched> pid=3000
+  - [pid=3000][err] Old Headless mode will be removed from the Chrome binary soon. Please use the new Headless mode (https://developer.chrome.com/docs/chromium/new-headless) or the chrome-headless-shell which is a standalone implementation of the old Headless mode (https://developer.chrome.com/blog/chrome-headless-shell).
+  - [pid=3000][err] 
+  - [pid=3000][err] [0821/032649.932224:WARNING:audio_manager_linux.cc(53)] Falling back to ALSA for audio output. PulseAudio is not available or could not be initialized.
+  - [pid=3000][err] Received signal 11 SI_KERNEL000000000000
+  - [pid=3000][err]  Possibly a General Protection Fault, can be due to a non-canonical address dereference. See "Intel 64 and IA-32 Architectures Software Developer’s Manual", Volume 1, Section 3.3.7.1.
+  - [pid=3000][err] #0 0x55c5fa5d0442 base::debug::CollectStackTrace()
+  - [pid=3000][err] #1 0x55c5fa5bd3be base::debug::StackTrace::StackTrace()
+  - [pid=3000][err] #2 0x55c5fa5cfe51 base::debug::(anonymous namespace)::StackDumpSignalHandler()
+  - [pid=3000][err] #3 0x7f78c6a42520 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x4251f)
+  - [pid=3000][err] #4 0x7f78c6a44c1d getenv
+  - [pid=3000][err] #5 0x55c5faf16739 IA__FcConfigGetFilename
+  - [pid=3000][err] #6 0x55c5faf33384 FcParseInclude
+  - [pid=3000][err] #7 0x55c5faf32aaf FcEndElement
+  - [pid=3000][err] #8 0x55c5faf514ef xmlParseEndTag1
+  - [pid=3000][err] #9 0x55c5faf54a36 xmlParseChunk
+  - [pid=3000][err] #10 0x55c5faf32067 FcConfigParseAndLoadFromMemoryInternal
+  - [pid=3000][err] #11 0x55c5faf31bac _FcConfigParse
+  - [pid=3000][err] #12 0x55c5faf31c33 _FcConfigParse
+  - [pid=3000][err] #13 0x55c5faf33370 FcParseInclude
+  - [pid=3000][err] #14 0x55c5faf32aaf FcEndElement
+  - [pid=3000][err] #15 0x55c5faf514ef xmlParseEndTag1
+  - [pid=3000][err] #16 0x55c5faf54a36 xmlParseChunk
+  - [pid=3000][err] #17 0x55c5faf32067 FcConfigParseAndLoadFromMemoryInternal
+  - [pid=3000][err] #18 0x55c5faf31bac _FcConfigParse
+  - [pid=3000][err] #19 0x55c5faf252cb FcInitLoadOwnConfig
+  - [pid=3000][err] #20 0x55c5faf25521 IA__FcInitLoadConfigAndFonts
+  - [pid=3000][err] #21 0x55c5faf156d1 FcConfigInit
+  - [pid=3000][err] #22 0x55c5fb067945 base::NoDestructor<>::NoDestructor<>()
+  - [pid=3000][err] #23 0x55c5fb0678d6 base::internal::Invoker<>::RunOnce()
+  - [pid=3000][err] #24 0x55c5fa56135f base::TaskAnnotator::RunTaskImpl()
+  - [pid=3000][err] #25 0x55c5fa585237 base::internal::TaskTracker::RunTaskImpl()
+  - [pid=3000][err] #26 0x55c5fa5852d1 base::internal::TaskTracker::RunSkipOnShutdown()
+  - [pid=3000][err] #27 0x55c5fa584f86 base::internal::TaskTracker::RunTask()
+  - [pid=3000][err] #28 0x55c5fa584a55 base::internal::TaskTracker::RunAndPopNextTask()
+  - [pid=3000][err] #29 0x55c5fa5971e8 base::internal::WorkerThread::RunWorker()
+  - [pid=3000][err] #30 0x55c5fa596e4d base::internal::WorkerThread::RunPooledWorker()
+  - [pid=3000][err] #31 0x55c5fa596d4d base::internal::WorkerThread::ThreadMain()
+  - [pid=3000][err] #32 0x55c5fa5b3b2a base::(anonymous namespace)::ThreadFunc()
+  - [pid=3000][err] #33 0x7f78c6a94ac3 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x94ac2)
+  - [pid=3000][err] #34 0x7f78c6b26850 (/usr/lib/x86_64-linux-gnu/libc.so.6+0x12684f)
+  - [pid=3000][err]   r8: 00002c6800215e00  r9: 00642e666e6f632e r10: 0000000000000040 r11: 0000000000000206
+  - [pid=3000][err]  r12: 005c0200682c0000 r13: 0000000000000004 r14: 0000000000000002 r15: 000055c5f3006249
+  - [pid=3000][err]   di: 000055c5f3006247  si: 00007f78c0e35dd0  bp: 0000000000004f48  bx: 00002c6800024800
+  - [pid=3000][err]   dx: 000055c5f3006247  ax: 0000000000000004  cx: 0000000000000000  sp: 00007f78c0e359e0
+  - [pid=3000][err]   ip: 00007f78c6a44c1d efl: 0000000000010206 cgf: 002b000000000033 erf: 0000000000000000
+  - [pid=3000][err]  trp: 000000000000000d msk: 0000000000000000 cr2: 0000000000000000
+  - [pid=3000][err] [end of stack trace]
+
